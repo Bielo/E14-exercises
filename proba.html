@@ -1,0 +1,47 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS</title>
+<style type="text/css">
+
+input[type=button]{
+background-color:green;
+border:1px solid green;
+color:white;
+font-weight:bold;
+}
+</style>
+<script type="text/javascript">
+function obl(){
+var a=document.getElementById("formularz").pow.value;
+var b=document.getElementById("formularz").rad.value;
+var c=a*b;
+var puste="Wybierz rodzaj płytek jakich chcesz użyć !!";
+if(b==""){document.getElementById("wynik").innerHTML=puste;}
+else{
+document.getElementById("wynik").innerHTML="<b>Koszt kafelkowania:</b> "+c+" zł";
+}
+}
+
+</script>
+</head>
+<body>
+<div id="baner"></div>
+<div id="panel_lewy"></div>
+
+<div id="panel_prawy">
+<form id="formularz">
+Powierzchnia w m<sup>2</sup><input type="number" name="pow"/><br>
+<input type="radio" value="70" name="rad"/>Płytka 20x20<br>
+<input type="radio" value="80" name="rad"/>Płytka 25x12<br>
+<input type="button" value="Sprawdź" onclick="obl()"/>
+<p id="wynik"></p>
+</form>
+</div>
+
+<div id="stopka"></div>
+
+</body>
+
+</html>

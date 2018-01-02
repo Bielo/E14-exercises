@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>Baza </title>
+	<script type="text/javascript">
+	function Kelwiny(form) {
+	var dane = parseFloat (form.cel.value);
+	var pom = dane + 273.15;
+	var pom1 = "K"
+	var blad = "To nie jest liczba"
+	if((isNaN(dane))) document.getElementById("wynik").innerHTML=blad;
+	else document.getElementById("wynik").innerHTML=pom+pom1;
+}
+	function Farenheity(form) {
+	var dane = parseFloat (form.cel.value);
+	var pom = ( dane * 1.8 ) + 32;
+	var pom1 = "F"
+	var blad= "To nie jest liczba"
+	if((isNaN(dane))) document.getElementById("wynik").innerHTML=blad;
+	else document.getElementById("wynik").innerHTML=pom+pom1;
+	}
+	</script>
+</head>
+
+<body>
+<form>
+Temperatura w <sup>o</sup> C </br>
+<input type="text" name="cel"> </br>
+Zamiana jednostek na: </br>
+<input type="button" value="Kelwiny" onClick="Kelwiny(this.form)">
+<input type="button" value="Farenheity" onClick="Farenheity(this.form)">
+<p id="wynik"> </p>
+</form>
+
+</body>
+</html>

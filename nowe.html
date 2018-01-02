@@ -1,0 +1,26 @@
+<body>
+<label for="liczba_1">Pierwsza liczba</label>
+<input type="number" name="liczba_1" id="liczba_1">
+
+<label for="liczba_2">Druga liczba</label>
+<input type="number" name="liczba_2" id="liczba_2">
+<br>
+<button onclick="obliczenia()">Oblicz</button>
+
+<p id="here"></p>
+
+<script>
+
+function obliczenia(){
+ var liczba_1, liczba_2, wynik, pisz, cena;
+ cena=8;
+ pisz=document.getElementById("here");
+ liczba_1=parseFloat(document.getElementById("liczba_1").value);
+ liczba_2=parseFloat(document.getElementById("liczba_2").value);
+ sciany= Math.round(2*(liczba_1*2.7)+(liczba_2*2.7));
+ var koszt = (sciany*cena);
+ wynik=("Powierzchnia ścian="+sciany+" koszt malowania="+koszt+"zł");
+ pisz.innerHTML=(wynik);
+}
+</script>
+</body>
